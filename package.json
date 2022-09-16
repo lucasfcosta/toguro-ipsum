@@ -5,8 +5,8 @@
     "description": "Em pleno 2022, ano da tecnologia, ano de copa do mundo, você ainda tem preconceito com o Toguro Ipsum?",
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "build": "next build && next export"
     },
     "repository": {
         "type": "git",
