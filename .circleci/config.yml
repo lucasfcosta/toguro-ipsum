@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/toguro-ipsum
     docker:
-      - image: circleci/node:18.9.0
+      - image: cimg/node:18.9.0
     # Inside the workflow, you define the jobs you want to run.
     steps:
       - checkout
@@ -46,3 +46,4 @@ workflows:
           filters:
             branches:
               only: master
+
