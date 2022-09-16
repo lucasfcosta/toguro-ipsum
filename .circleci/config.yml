@@ -33,7 +33,7 @@ jobs:
           name: install awscli
           command: sudo pip install awscli
       - attach_workspace:
-          at: _site
+          at: out
       - run:
           name: deploy to S3
           command: aws s3 sync --delete out/* s3://toguroipsum.com/
