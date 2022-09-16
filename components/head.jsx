@@ -46,10 +46,7 @@ const Head = () => {
         name="twitter:description"
         content="2022, ano da tecnologia: deixe o shape falar por você."
       />
-      <meta
-        name="twitter:image"
-        content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"
-      />
+      <meta name="twitter:image" content="/togs.png" />
     </HeadTag>
   );
 };
