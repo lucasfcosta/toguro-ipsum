@@ -83,14 +83,6 @@ const IpsumGenerator = () => {
             >
               O shape fala por mim
             </Button>
-            <Button
-              marginTop="24px"
-              height="48px"
-              w={{ base: "90%", lg: "100%" }}
-              colorScheme="gray"
-            >
-              Copiar
-            </Button>
           </Flex>
         </Center>
       </Box>
