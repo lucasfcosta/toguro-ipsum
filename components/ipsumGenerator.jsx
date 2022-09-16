@@ -49,6 +49,7 @@ const IpsumGenerator = () => {
   const [content, setContent] = React.useState("");
 
   const newIpsum = () => {
+    sa_event("ipsum_generated");
     const content = generate(paragraphs, words);
     setContent(content);
   };
