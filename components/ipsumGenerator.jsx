@@ -40,8 +40,8 @@ const generate = (paragraphs, words) => {
   return result.join("\n\n");
 };
 
-const DEFAULT_PARAGRAPHS = 1;
-const DEFAULT_WORDS = 100;
+const DEFAULT_PARAGRAPHS = 2;
+const DEFAULT_WORDS = 50;
 
 const IpsumGenerator = () => {
   const [paragraphs, setParagraphs] = React.useState(DEFAULT_PARAGRAPHS);
