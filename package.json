@@ -1,0 +1,20 @@
+{
+    "name": "toguro-ipsum",
+    "version": "1.0.0",
+    "description": "Em pleno 2022, ano da tecnologia, ano de copa do mundo, você ainda tem preconceito com o Toguro Ipsum?",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lucasfcosta/toguro-ipsum.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "GPL v2",
+    "bugs": {
+        "url": "https://github.com/lucasfcosta/toguro-ipsum/issues"
+    },
+    "homepage": "https://github.com/lucasfcosta/toguro-ipsum#readme"
+}
