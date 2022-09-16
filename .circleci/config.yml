@@ -24,7 +24,6 @@ jobs:
           root: ./
           paths:
             - out
-
   deploy:
     docker:
       - image: circleci/python:2.7-jessie
@@ -37,9 +36,10 @@ jobs:
           at: _site
       - run:
           name: deploy to S3
-          command: aws s3 sync --delete _site/* s3://toguroipsum.com/
+          command: aws s3 sync --delete out/* s3://toguroipsum.com/
 
 workflows:
+  version: 2.1
   build-deploy:
     jobs:
       - build
@@ -48,5 +48,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master
-
+              only: main
