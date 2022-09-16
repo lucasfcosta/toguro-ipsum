@@ -14,11 +14,16 @@ export default function Home() {
       </Box>
       <Center>
         <Text marginBottom="2em">
-          <Link color="teal.500" href="https://twitter.com/thewizardlucas">
+          <Link
+            onClick={() => sa_event("twitter-link")}
+            color="teal.500"
+            href="https://twitter.com/thewizardlucas"
+          >
             Twitter
           </Link>
           {" — "}
           <Link
+            onClick={() => sa_event("github-link")}
             color="teal.500"
             href="https://github.com/lucasfcosta/toguro-ipsum"
           >
