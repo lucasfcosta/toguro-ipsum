@@ -37,10 +37,15 @@ jobs:
           at: _site
       - run:
           name: deploy to S3
-          command: aws s3 sync --delete _site/* s3://toguroipsum.com/
+          command: aws s3 sync --delete out/* s3://toguroipsum.com/
 
 workflows:
   build-deploy:
     jobs:
       - build
-      - deploy
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
