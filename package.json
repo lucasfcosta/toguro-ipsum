@@ -1,10 +1,12 @@
 {
     "name": "toguro-ipsum",
     "version": "1.0.0",
+    "private": true,
     "description": "Em pleno 2022, ano da tecnologia, ano de copa do mundo, você ainda tem preconceito com o Toguro Ipsum?",
-    "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
     },
     "repository": {
         "type": "git",
@@ -16,5 +18,10 @@
     "bugs": {
         "url": "https://github.com/lucasfcosta/toguro-ipsum/issues"
     },
-    "homepage": "https://github.com/lucasfcosta/toguro-ipsum#readme"
+    "homepage": "https://github.com/lucasfcosta/toguro-ipsum#readme",
+    "dependencies": {
+        "next": "latest",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    }
 }
