@@ -1,0 +1,48 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/toguro-ipsum
+    docker:
+      - image: circleci/node:18.9.0
+    # Inside the workflow, you define the jobs you want to run.
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - out
+
+  deploy:
+    docker:
+      - image: circleci/python:2.7-jessie
+    working_directory: ~/toguro-ipsum
+    steps:
+      - run:
+          name: install awscli
+          command: sudo pip install awscli
+      - attach_workspace:
+          at: _site
+      - run:
+          name: deploy to S3
+          command: aws s3 sync --delete _site/* s3://toguro-ipsum.com/
+
+workflows:
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
