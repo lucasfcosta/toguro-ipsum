@@ -60,7 +60,7 @@ const PHRASES = [
     content: `Parabéns, mas se o shape não estiver em dia, nada vale o parabéns`,
   },
   { isStarter: false, content: `As gringas bugaram` },
-  { isStarter: false, content: `A gringa está tentando enter o shape` },
+  { isStarter: false, content: `A gringa está tentando entender o shape` },
   {
     isStarter: false,
     content: `Dei um perfil fake meu pra elas seguirem, quero um amor de verdade não uma rata que me quer pelo Toguro que sou`,
