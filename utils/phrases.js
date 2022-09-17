@@ -8,7 +8,6 @@ const PHRASES = [
   { isStarter: true, content: `Em pleno ${year}, ano do foguete` },
   { isStarter: true, content: `Em pleno ${year}, ano do amor` },
   { isStarter: true, content: `Em pleno ${year}, ano do Elon Musk` },
-  { isStarter: true, content: `Em pleno ${year}, ano do Elon Musk` },
   {
     isStarter: false,
     content: `Só queria voltar no tempo e jogar meu Super Nintendo`,
