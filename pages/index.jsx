@@ -15,7 +15,10 @@ export default function Home() {
       <Center>
         <Text marginBottom="2em">
           <Link
-            onClick={() => sa_event("twitter-link")}
+            onClick={() => {
+              if (!sa_event) return;
+              sa_event("twitter-link");
+            }}
             color="teal.500"
             href="https://twitter.com/thewizardlucas"
           >
@@ -23,7 +26,10 @@ export default function Home() {
           </Link>
           {" — "}
           <Link
-            onClick={() => sa_event("github-link")}
+            onClick={() => {
+              if (!sa_event) return;
+              sa_event("github-link");
+            }}
             color="teal.500"
             href="https://github.com/lucasfcosta/toguro-ipsum"
           >
