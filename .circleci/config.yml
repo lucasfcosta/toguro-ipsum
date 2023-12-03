@@ -36,7 +36,7 @@ jobs:
           at: out
       - run:
           name: deploy to S3
-          command: aws s3 sync --delete out/* s3://toguroipsum.com/
+          command: aws s3 sync --delete out/* s3://toguroipsum/
 
 workflows:
   version: 2.1
